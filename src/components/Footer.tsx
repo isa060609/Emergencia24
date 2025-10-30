@@ -22,7 +22,7 @@ export function Footer() {
   const socialLinks = [
     { name: "Facebook", icon: Facebook, href: "#" },
     { name: "Twitter", icon: Twitter, href: "#" },
-    { name: "Instagram", icon: Instagram, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "https://instagram.com/emergencia24hoficial" },
     { name: "YouTube", icon: Youtube, href: "#" },
   ];
 
