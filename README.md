@@ -1,7 +1,7 @@
 
-  # Mockup Site Emergências 24
+  # Emergencia24
 
-  This is a code bundle for Mockup Site Emergências 24. The original project is available at https://www.figma.com/design/Ed57XRx0UB3SRj5jGKxL3s/Mockup-Site-Emerg%C3%AAncias-24.
+  This is a code bundle for Emergencia24. The original project is available at https://www.figma.com/design/Ed57XRx0UB3SRj5jGKxL3s/Mockup-Site-Emerg%C3%AAncias-24.
 
   ## Running the code
 
