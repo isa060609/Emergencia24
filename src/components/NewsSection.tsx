@@ -44,8 +44,10 @@ export function NewsSection() {
     }
   };
 
-  return (
-    <section id="noticias" className="py-20 bg-[#fdf0d5]">
+  return (  
+    <section id="noticias" className="py-20" style={{
+    background: "linear-gradient(to right bottom, #bbd2f0ff,  #bbd2f0ff,  #bbd2f0ff)"
+  }}>
       <div className="container mx-auto px-4">
         {/* Header da Seção */}
         <div className="text-center mb-12">

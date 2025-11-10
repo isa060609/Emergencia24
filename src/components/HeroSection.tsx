@@ -11,7 +11,9 @@ export function HeroSection() {
   ];
 
   return (
-    <section id="inicio" className="bg-gradient-to-br from-[#003049] via-[#669bbc] to-[#003049] text-white py-20">
+    <section id="inicio" className="py-20" style={{
+    background: "linear-gradient(to right bottom, #750101ff, #000, #081588ff)"
+  }}>
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Conteúdo Principal */}
@@ -21,9 +23,8 @@ export function HeroSection() {
                 <AlertTriangle className="h-5 w-5 mr-2" />
                 <span>Emergências 24/7</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Sempre pronto para 
-                <span className="text-[#fdf0d5]"> ajudar</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-[#fdf0d5] leading-tight">
+                Sempre pronto para ajudar
               </h1>
               <p className="text-xl text-[#fdf0d5]/90 max-w-lg">
                 Informações essenciais, notícias atualizadas e orientações para situações de emergência. 
@@ -34,7 +35,7 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 
                 size="lg"
-                className="bg-[#c1121f] hover:bg-[#780000] text-white border-0 text-lg px-8 py-4"
+                className="bg-[#c1121f] hover:bg-[#780000] text-black border-0 text-lg px-8 py-4"
                 onClick={() => window.open('tel:192', '_self')}
               >
                 <Phone className="h-6 w-6 mr-3" />
@@ -43,7 +44,9 @@ export function HeroSection() {
               <Button 
                 size="lg"
                 variant="outline"
-                className="border-[#fdf0d5] text-[#fdf0d5] hover:bg-[#fdf0d5] hover:text-[#003049] text-lg px-8 py-4"
+               className="bg-white text-black border border-[#fdf0d5] hover:text-[#c1121f] hover:bg-white text-lg px-8 py-4 transition-colors duration-300"
+  onMouseEnter={(e) => e.currentTarget.style.color = '#c1121f'}
+  onMouseLeave={(e) => e.currentTarget.style.color = 'black'}
                 onClick={() => document.getElementById('quiz')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Fazer Quiz de Emergência

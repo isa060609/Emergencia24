@@ -27,15 +27,17 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-[#003049] text-[#fdf0d5]">
+    <footer className="py-20" style={{
+    background: "linear-gradient(to right bottom, #750101ff, #000, #081588ff)"
+  }}>
       {/* Seção Principal */}
-      <div className="container mx-auto px-4 py-12">
+      <div className=" mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           
           {/* Sobre */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="bg-[#c1121f] p-2 rounded-full">
+              <div className="bg-[ #ffffffff] p-2 rounded-full">
                 <Phone className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -50,15 +52,15 @@ export function Footer() {
             
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
-                <Clock className="h-4 w-4 text-[#669bbc]" />
+                <Clock className="h-4 w-4 text-[ #ffffffff]" />
                 <span>Atendimento 24 horas, 7 dias por semana</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-                <MapPin className="h-4 w-4 text-[#669bbc]" />
+                <MapPin className="h-4 w-4 text-[#ffffffff]" />
                 <span>Cobertura nacional</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
-                <Mail className="h-4 w-4 text-[#669bbc]" />
+                <Mail className="h-4 w-4 text-[ #ffffffff]" />
                 <span>contato@emergencia24h.gov.br</span>
               </div>
             </div>
@@ -66,7 +68,7 @@ export function Footer() {
 
           {/* Números de Emergência */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-[#fdf0d5]">Números de Emergência</h3>
+            <h3 className="text-lg font-bold text-[#ffffffff]">Números de Emergência</h3>
             <div className="space-y-3">
               {emergencyServices.map((service) => (
                 <div key={service.number} className="flex items-center justify-between p-3 bg-[#669bbc]/10 rounded-lg hover:bg-[#669bbc]/20 transition-colors">
@@ -88,7 +90,7 @@ export function Footer() {
 
           {/* Links Rápidos */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-[#fdf0d5]">Links Úteis</h3>
+            <h3 className="text-lg font-bold text-[ #ffffffff]">Links Úteis</h3>
             <nav className="space-y-2">
               {quickLinks.map((link) => (
                 <a
@@ -106,7 +108,7 @@ export function Footer() {
           {/* Redes Sociais e Newsletter */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h3 className="text-lg font-bold text-[#fdf0d5]">Siga-nos</h3>
+              <h3 className="text-lg font-bold text-[ #ffffffff]">Siga-nos</h3>
               <div className="flex space-x-3">
                 {socialLinks.map((social) => (
                   <Button
@@ -140,6 +142,8 @@ export function Footer() {
       <Separator className="bg-[#669bbc]/30" />
 
       {/* Rodapé Inferior */}
+
+      
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-[#fdf0d5]/70">
@@ -150,7 +154,7 @@ export function Footer() {
               <a href="#" className="hover:text-[#669bbc] transition-colors">Acessibilidade</a>
             </div>
           </div>
-
+gap
           <div className="flex items-center space-x-4">
             <div className="bg-[#c1121f] px-4 py-2 rounded-full">
               <p className="text-white text-sm font-semibold">

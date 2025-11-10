@@ -6,7 +6,9 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-[#003049] text-[#fdf0d5] sticky top-0 z-50 shadow-lg">
+    <header className="text-[#fdf0d5] sticky top-0 z-50 shadow-lg"style={{
+    background:"linear-gradient(to right bottom, #750101ff, #000, #081588ff)"
+  }}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -16,7 +18,7 @@ export function Header() {
             </div>
             <div>
               <h1 className="text-xl font-bold">Emergência 24h</h1>
-              <p className="text-xs text-[#669bbc]">Sempre pronto para ajudar</p>
+              <p className="text-xs text-[#0000]">Sempre pronto para ajudar</p>
             </div>
           </div>
 

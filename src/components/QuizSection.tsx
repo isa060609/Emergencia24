@@ -146,7 +146,9 @@ export function QuizSection() {
     const scoreInfo = getScoreMessage(score, questions.length);
     
     return (
-      <section id="quiz" className="py-20 bg-gradient-to-br from-[#003049] to-[#669bbc]">
+      <section id="quiz" className="py-20" style={{
+    background: "linear-gradient(to right bottom, #660000ff, #02119bff)"
+  }}>
         <div className="container mx-auto px-4">
           <Card className="max-w-2xl mx-auto bg-white border-0 shadow-2xl">
             <CardContent className="p-8 text-center space-y-6">
@@ -203,7 +205,9 @@ export function QuizSection() {
   const question = questions[currentQuestion];
 
   return (
-    <section id="quiz" className="py-20 bg-gradient-to-br from-[#003049] to-[#669bbc]">
+    <section id="quiz" className="py-20" style={{
+    background: "linear-gradient(to right bottom, #031772ff, #000, #510303)"
+  }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-[#fdf0d5] mb-4">
