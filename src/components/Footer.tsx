@@ -11,19 +11,21 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Como Fazer uma Chamada de Emergência", href: "#" },
-    { name: "Primeiros Socorros Básicos", href: "#" },
-    { name: "Plano de Evacuação Familiar", href: "#" },
-    { name: "Kit de Emergência", href: "#" },
-    { name: "Alertas Meteorológicos", href: "#" },
-    { name: "Centros de Atendimento", href: "#" },
+    {  name: "Como Fazer uma Chamada de Emergência", 
+    href: "https://www.youtube.com/watch?v=BhltA_z05CQ" 
+   },
+    { name: "Primeiros Socorros Básicos", href: "https://www.saude.sp.gov.br/hospital-geral-sao-mateus/homepage/acesso-rapido/primeiros-socorros"
+},
+    { name: "Plano de Evacuação Familiar", href: "https://www.spsemprealerta.sp.gov.br/orientacoes/plano-familiar-de-emergencia/" },
+
+    { name: "Kit de Emergência", href: "https://www.ready.gov/kit" },
+    { name: "Alertas", href: "https://www.spsemprealerta.sp.gov.br/" },
+
   ];
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "#" },
     { name: "Twitter", icon: Twitter, href: "#" },
     { name: "Instagram", icon: Instagram, href: "https://instagram.com/emergencia24hoficial" },
-    { name: "YouTube", icon: Youtube, href: "#" },
   ];
 
   return (
@@ -41,7 +43,7 @@ export function Footer() {
                 <Phone className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold">Emergência 24h</h3>
+                <h3 className="text-xl font-bold"  style={{color: "#fff"}}>Emergência 24h</h3>
                 <p className="text-xs text-[#669bbc]">Sempre pronto para ajudar</p>
               </div>
             </div>
@@ -51,15 +53,15 @@ export function Footer() {
             </p>
             
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm">
-                <Clock className="h-4 w-4 text-[ #ffffffff]" />
+              <div className="flex items-center space-x-2 text-sm"  style={{color: "#fff"}}>
+                <Clock className="h-4 w-4"/>
                 <span>Atendimento 24 horas, 7 dias por semana</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm">
+              <div className="flex items-center space-x-2 text-sm"  style={{color: "#fff"}}>
                 <MapPin className="h-4 w-4 text-[#ffffffff]" />
                 <span>Cobertura nacional</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm">
+              <div className="flex items-center space-x-2 text-sm"  style={{color: "#fff"}}>
                 <Mail className="h-4 w-4 text-[ #ffffffff]" />
                 <span>contato@emergencia24h.gov.br</span>
               </div>
@@ -68,7 +70,7 @@ export function Footer() {
 
           {/* Números de Emergência */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-[#ffffffff]">Números de Emergência</h3>
+            <h3 className="text-lg font-bold"  style={{color: "#fff"}}>Números de Emergência</h3>
             <div className="space-y-3">
               {emergencyServices.map((service) => (
                 <div key={service.number} className="flex items-center justify-between p-3 bg-[#669bbc]/10 rounded-lg hover:bg-[#669bbc]/20 transition-colors">
@@ -90,7 +92,7 @@ export function Footer() {
 
           {/* Links Rápidos */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-[ #ffffffff]">Links Úteis</h3>
+            <h3 className="text-lg font-bold"  style={{color: "#fff"}}>Links Úteis</h3>
             <nav className="space-y-2">
               {quickLinks.map((link) => (
                 <a
@@ -108,7 +110,7 @@ export function Footer() {
           {/* Redes Sociais e Newsletter */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h3 className="text-lg font-bold text-[ #ffffffff]">Siga-nos</h3>
+              <h3 className="text-lg font-bold"  style={{color: "#fff"}}>Siga-nos</h3>
               <div className="flex space-x-3">
                 {socialLinks.map((social) => (
                   <Button
@@ -129,11 +131,6 @@ export function Footer() {
               <p className="text-sm text-[#fdf0d5]/70">
                 Receba notificações importantes sobre emergências na sua região
               </p>
-              <Button 
-                className="w-full bg-[#669bbc] hover:bg-[#c1121f] text-[#003049] hover:text-white border-0"
-              >
-                Cadastrar-se nos Alertas
-              </Button>
             </div>
           </div>
         </div>
@@ -154,7 +151,6 @@ export function Footer() {
               <a href="#" className="hover:text-[#669bbc] transition-colors">Acessibilidade</a>
             </div>
           </div>
-gap
           <div className="flex items-center space-x-4">
             <div className="bg-[#c1121f] px-4 py-2 rounded-full">
               <p className="text-white text-sm font-semibold">

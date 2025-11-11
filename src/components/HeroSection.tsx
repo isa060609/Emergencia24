@@ -19,7 +19,7 @@ export function HeroSection() {
           {/* Conteúdo Principal */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <div className="inline-flex items-center bg-[#c1121f] px-4 py-2 rounded-full">
+              <div className="inline-flex items-center bg-[#c1121f] px-4 py-2 rounded-full"  style={{color: "#fff"}}>
                 <AlertTriangle className="h-5 w-5 mr-2" />
                 <span>Emergências 24/7</span>
               </div>
@@ -32,7 +32,7 @@ export function HeroSection() {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4"  style={{color: "#fff"}}>
               <Button 
                 size="lg"
                 className="bg-[#c1121f] hover:bg-[#780000] text-black border-0 text-lg px-8 py-4"
