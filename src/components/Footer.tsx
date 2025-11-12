@@ -145,11 +145,6 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-[#fdf0d5]/70">
             <p>&copy; 2025 Emergência 24h. Todos os direitos reservados.</p>
-            <div className="flex space-x-4">
-              <a href="#" className="hover:text-[#669bbc] transition-colors">Política de Privacidade</a>
-              <a href="#" className="hover:text-[#669bbc] transition-colors">Termos de Uso</a>
-              <a href="#" className="hover:text-[#669bbc] transition-colors">Acessibilidade</a>
-            </div>
           </div>
           <div className="flex items-center space-x-4">
             <div className="bg-[#c1121f] px-4 py-2 rounded-full">
