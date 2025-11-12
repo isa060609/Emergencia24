@@ -11,31 +11,27 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    {  name: "Como Fazer uma Chamada de Emergência", 
-    href: "https://www.youtube.com/watch?v=BhltA_z05CQ" 
-   },
-    { name: "Primeiros Socorros Básicos", href: "https://www.saude.sp.gov.br/hospital-geral-sao-mateus/homepage/acesso-rapido/primeiros-socorros"
-},
-    { name: "Plano de Evacuação Familiar", href: "https://www.spsemprealerta.sp.gov.br/orientacoes/plano-familiar-de-emergencia/" },
-
-    { name: "Kit de Emergência", href: "https://www.ready.gov/kit" },
-    { name: "Alertas", href: "https://www.spsemprealerta.sp.gov.br/" },
+    { name: "Como Fazer uma Chamada de Emergência", href: "https://www.youtube.com/watch?v=BhltA_z05CQ", target: "_blank" },
+    { name: "Primeiros Socorros Básicos", href: "https://www.saude.sp.gov.br/hospital-geral-sao-mateus/homepage/acesso-rapido/primeiros-socorros", target: "_blank" },
+    { name: "Plano de Evacuação Familiar", href: "https://www.spsemprealerta.sp.gov.br/orientacoes/plano-familiar-de-emergencia/", target: "_blank" },
+    { name: "Kit de Emergência", href: "https://www.ready.gov/kit", target: "_blank" },
+    { name: "Alertas", href: "https://www.spsemprealerta.sp.gov.br/", target: "_blank" },
 
   ];
 
   const socialLinks = [
-    { name: "Twitter", icon: Twitter, href: "#" },
+    { name: "Twitter", icon: Twitter, href: "https://x.com/emergencia24hr" },
     { name: "Instagram", icon: Instagram, href: "https://instagram.com/emergencia24hoficial" },
   ];
 
   return (
     <footer className="py-20" style={{
-    background: "linear-gradient(to right bottom, #750101ff, #000, #081588ff)"
-  }}>
+      background: "linear-gradient(to right bottom, #750101ff, #000, #081588ff)"
+    }}>
       {/* Seção Principal */}
       <div className=" mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
-          
+
           {/* Sobre */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
@@ -43,25 +39,25 @@ export function Footer() {
                 <Phone className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold"  style={{color: "#fff"}}>Emergência 24h</h3>
+                <h3 className="text-xl font-bold" style={{ color: "#fff" }}>Emergência 24h</h3>
                 <p className="text-xs text-[#669bbc]">Sempre pronto para ajudar</p>
               </div>
             </div>
             <p className="text-[#fdf0d5]/80 text-sm leading-relaxed">
-              Portal dedicado à segurança e prevenção de emergências. 
+              Portal dedicado à segurança e prevenção de emergências.
               Informações confiáveis, orientações especializadas e acesso rápido aos serviços de emergência.
             </p>
-            
+
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm"  style={{color: "#fff"}}>
-                <Clock className="h-4 w-4"/>
+              <div className="flex items-center space-x-2 text-sm" style={{ color: "#fff" }}>
+                <Clock className="h-4 w-4" />
                 <span>Atendimento 24 horas, 7 dias por semana</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm"  style={{color: "#fff"}}>
+              <div className="flex items-center space-x-2 text-sm" style={{ color: "#fff" }}>
                 <MapPin className="h-4 w-4 text-[#ffffffff]" />
                 <span>Cobertura nacional</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm"  style={{color: "#fff"}}>
+              <div className="flex items-center space-x-2 text-sm" style={{ color: "#fff" }}>
                 <Mail className="h-4 w-4 text-[ #ffffffff]" />
                 <span>contato@emergencia24h.gov.br</span>
               </div>
@@ -70,7 +66,7 @@ export function Footer() {
 
           {/* Números de Emergência */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold"  style={{color: "#fff"}}>Números de Emergência</h3>
+            <h3 className="text-lg font-bold" style={{ color: "#fff" }}>Números de Emergência</h3>
             <div className="space-y-3">
               {emergencyServices.map((service) => (
                 <div key={service.number} className="flex items-center justify-between p-3 bg-[#669bbc]/10 rounded-lg hover:bg-[#669bbc]/20 transition-colors">
@@ -92,12 +88,14 @@ export function Footer() {
 
           {/* Links Rápidos */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold"  style={{color: "#fff"}}>Links Úteis</h3>
+            <h3 className="text-lg font-bold" style={{ color: "#fff" }}>Links Úteis</h3>
             <nav className="space-y-2">
               {quickLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-between text-sm text-[#fdf0d5]/80 hover:text-[#669bbc] transition-colors p-2 rounded hover:bg-[#669bbc]/10"
                 >
                   <span>{link.name}</span>
@@ -110,7 +108,7 @@ export function Footer() {
           {/* Redes Sociais e Newsletter */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h3 className="text-lg font-bold"  style={{color: "#fff"}}>Siga-nos</h3>
+              <h3 className="text-lg font-bold" style={{ color: "#fff" }}>Siga-nos</h3>
               <div className="flex space-x-3">
                 {socialLinks.map((social) => (
                   <Button
@@ -126,12 +124,12 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="space-y-3">
+            {/* <div className="space-y-3">
               <h4 className="font-semibold text-[#fdf0d5]">Alertas de Emergência</h4>
               <p className="text-sm text-[#fdf0d5]/70">
                 Receba notificações importantes sobre emergências na sua região
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -140,7 +138,7 @@ export function Footer() {
 
       {/* Rodapé Inferior */}
 
-      
+
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-[#fdf0d5]/70">
