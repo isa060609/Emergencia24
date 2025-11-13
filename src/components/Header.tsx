@@ -16,6 +16,10 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+
+
+
+        
           <div className="flex items-center space-x-3">
             <img
               src={logo}

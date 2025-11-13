@@ -115,43 +115,44 @@ export function InstructionsSection() {
       emergencyNumber: "192"
     },
     {
-      id: "terremoto",
-      title: "Terremotos",
-      icon: Mountain,
-      color: "text-[#003049]",
-      bgColor: "bg-[#003049]/10",
-      description: "Procedimentos durante e após abalos sísmicos",
+      id: "acidentes-domesticos",
+      title: "Acidentes Domésticos",
+      icon: AlertTriangle,
+      color: "text-[#b45309]",
+      bgColor: "bg-[#fef3c7]/30",
+      description: "Cuidados e ações em casos de quedas, cortes, queimaduras e choques dentro de casa",
       immediateActions: [
-        "Abaixe-se, cubra-se e segure-se",
-        "Procure abrigo embaixo de mesa resistente",
-        "Afaste-se de janelas e objetos que podem cair",
-        "Se estiver ao ar livre, afaste-se de prédios",
-        "Após o tremor, saia calmamente do edifício",
-        "Ligue para 193 se houver feridos ou danos"
+        "Mantenha a calma e avalie o tipo de acidente (queda, corte, queimadura, choque etc.) (192 / 193)",
+        "Afaste a vítima da fonte de perigo, se for seguro fazer isso (192 / 193)",
+        "Em caso de queimadura, lave o local apenas com água corrente fria por alguns minutos (192 / 193)",
+        "Se houver sangramento, faça pressão direta com um pano limpo (192 / 193)",
+        "Em caso de inconsciência ou dificuldade para respirar, ligue para 192 (SAMU) imediatamente 192 (SAMU)",
+        "Se o acidente envolver eletricidade, desligue a energia antes de tocar na vítima 193 (Bombeiros)"
       ],
       doNots: [
-        "Não corra durante o tremor",
-        "Não use elevadores",
-        "Não fique próximo a janelas",
-        "Não acenda fósforos ou isqueiros",
-        "Não entre em edifícios danificados"
+        "Não fure bolhas de queimaduras",
+        "Não use pomadas, pasta de dente ou manteiga em queimaduras",
+        "Não tente mover vítimas com suspeita de fratura grave",
+        "Não ofereça comida ou bebida a alguém inconsciente",
+        "Não ignore ferimentos profundos ou perda de consciência, procure atendimento médico"
       ],
       prevention: [
-        "Fixe móveis pesados nas paredes",
-        "Tenha um plano de evacuação familiar",
-        "Mantenha um kit de emergência",
-        "Identifique pontos seguros em cada cômodo",
-        "Pratique regularmente os procedimentos"
+        "Mantenha produtos de limpeza e medicamentos fora do alcance de crianças ",
+        "Evite deixar panelas com cabos virados para fora do fogão",
+        "Use tapetes antiderrapantes em banheiros e áreas molhadas",
+        "Verifique fiações elétricas e tomadas regularmente",
+        "Tenha um kit de primeiros socorros sempre acessível"
       ],
-      emergencyNumber: "193"
+      emergencyNumber: "192 / 193"
     }
+
   ];
 
   const [openInstructions, setOpenInstructions] = useState<string[]>([]);
 
   const toggleInstruction = (id: string) => {
-    setOpenInstructions(prev => 
-      prev.includes(id) 
+    setOpenInstructions(prev =>
+      prev.includes(id)
         ? prev.filter(item => item !== id)
         : [...prev, id]
     );
@@ -159,8 +160,8 @@ export function InstructionsSection() {
 
   return (
     <section id="instrucoes" className="py-20" style={{
-    background: "linear-gradient(to right bottom,  #bbd2f0ff,  #bbd2f0ff,  #bbd2f0ff)"
-  }}>
+      background: "linear-gradient(to right bottom,  #bbd2f0ff,  #bbd2f0ff,  #bbd2f0ff)"
+    }}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
@@ -168,7 +169,7 @@ export function InstructionsSection() {
             Instruções de Emergência
           </h2>
           <p className="text-xl text-[#003049]/70 max-w-3xl mx-auto">
-            Guias detalhados para diferentes tipos de emergências. 
+            Guias detalhados para diferentes tipos de emergências.
             Conhecimento que pode salvar vidas em momentos críticos.
           </p>
         </div>
@@ -269,7 +270,7 @@ export function InstructionsSection() {
               <p className="text-xl text-[#fdf0d5]/80 max-w-2xl mx-auto">
                 Mantenha sempre preparado um kit com itens básicos para situações de emergência
               </p>
-              
+
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
                 {[
                   { title: "Documentos", items: ["RG, CPF, CNH", "Cartão do SUS", "Comprovantes", "Fotos 3x4"] },

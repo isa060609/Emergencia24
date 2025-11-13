@@ -24,7 +24,7 @@ export function HeroSection() {
                 <span>Emergências 24/7</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-[#fdf0d5] leading-tight">
-                Sempre pronto para ajudar
+          Seu guia de emergência
               </h1>
               <p className="text-xl text-[#fdf0d5]/90 max-w-lg">
                 Informações essenciais, notícias atualizadas e orientações para situações de emergência. 
