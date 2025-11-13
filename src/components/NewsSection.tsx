@@ -13,14 +13,22 @@ export function NewsSection() {
   const API_URL = `https://gnews.io/api/v4/search?q=incendio+OR+enchente+OR+resgate+OR+emergencia&lang=pt&country=br&max=3&token=${API_KEY}`;
 
   async function carregarNoticias() {
-    try {
-      const res = await fetch(API_URL);
-      const data = await res.json();
-      setNews(data.articles.slice(0, 3)); // 🧩 Apenas 3 notícias
-    } catch (error) {
-      console.error("Erro ao carregar notícias:", error);
-    }
+  try {
+    const API_URL = `https://gnews.io/api/v4/search?q=incendio+OR+enchente+OR+resgate+OR+emergencia&lang=pt&country=br&max=3&token=e24c9660e298d76ec197d3258e8effc8`;
+
+    // Passa pelo proxy para evitar bloqueio de CORS
+    const proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(API_URL)}`;
+
+    const res = await fetch(proxyURL);
+    const dataWrapped = await res.json();
+    const data = JSON.parse(dataWrapped.contents);
+
+    setNews(data.articles.slice(0, 3));
+  } catch (error) {
+    console.error("Erro ao carregar notícias:", error);
   }
+}
+
 
   useEffect(() => {
     carregarNoticias();
