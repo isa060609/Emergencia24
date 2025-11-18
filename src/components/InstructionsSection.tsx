@@ -4,7 +4,6 @@ import { Button } from "./ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui/collapsible";
 
 interface Emergency {
   id: string;
@@ -30,16 +29,16 @@ export function InstructionsSection() {
       description: "Orientações para situações de incêndio em casa, trabalho ou áreas públicas",
       immediateActions: [
         "Ligue imediatamente para 193 (Bombeiros)",
-        "Se possível, saia do local pela rota mais segura",
+        "Saia do local pela rota mais segura",
         "Mantenha-se abaixado para evitar inalação de fumaça",
         "Toque as portas antes de abrir (se estiver quente, não abra)",
-        "Use as escadas, nunca o elevador",
+        "Use escadas, nunca elevador",
         "Reúna-se no ponto de encontro pré-definido"
       ],
       doNots: [
         "Não volte para buscar objetos pessoais",
         "Não use elevadores durante incêndios",
-        "Não jogue água em fogo de origem elétrica",
+        "Não jogue água em fogo elétrico",
         "Não abra janelas desnecessariamente",
         "Não use materiais sintéticos para se proteger"
       ],
@@ -64,7 +63,7 @@ export function InstructionsSection() {
         "Desligue a energia elétrica da casa",
         "Ligue para 193 (Bombeiros) ou 199 (Defesa Civil)",
         "Mantenha-se longe de fios elétricos caídos",
-        "Use roupas e calçados que protejam dos detritos",
+        "Use roupas e calçados adequados",
         "Sinalize sua localização se estiver ilhado"
       ],
       doNots: [
@@ -122,22 +121,22 @@ export function InstructionsSection() {
       bgColor: "bg-[#fef3c7]/30",
       description: "Cuidados e ações em casos de quedas, cortes, queimaduras e choques dentro de casa",
       immediateActions: [
-        "Mantenha a calma e avalie o tipo de acidente (queda, corte, queimadura, choque etc.) (192 / 193)",
-        "Afaste a vítima da fonte de perigo, se for seguro fazer isso (192 / 193)",
-        "Em caso de queimadura, lave o local apenas com água corrente fria por alguns minutos (192 / 193)",
-        "Se houver sangramento, faça pressão direta com um pano limpo (192 / 193)",
-        "Em caso de inconsciência ou dificuldade para respirar, ligue para 192 (SAMU) imediatamente 192 (SAMU)",
-        "Se o acidente envolver eletricidade, desligue a energia antes de tocar na vítima 193 (Bombeiros)"
+        "Mantenha a calma e avalie o tipo de acidente (queda, corte, queimadura, choque etc.)",
+        "Afaste a vítima da fonte de perigo, se for seguro",
+        "Em caso de queimadura, lave o local apenas com água corrente fria",
+        "Se houver sangramento, faça pressão direta com um pano limpo",
+        "Em caso de inconsciência ou dificuldade para respirar, ligue para 192 (SAMU)",
+        "Se o acidente envolver eletricidade, desligue a energia antes de tocar na vítima"
       ],
       doNots: [
         "Não fure bolhas de queimaduras",
-        "Não use pomadas, pasta de dente ou manteiga em queimaduras",
+        "Não use pomadas, pasta de dente ou manteiga",
         "Não tente mover vítimas com suspeita de fratura grave",
         "Não ofereça comida ou bebida a alguém inconsciente",
         "Não ignore ferimentos profundos ou perda de consciência, procure atendimento médico"
       ],
       prevention: [
-        "Mantenha produtos de limpeza e medicamentos fora do alcance de crianças ",
+        "Mantenha produtos de limpeza e medicamentos fora do alcance de crianças",
         "Evite deixar panelas com cabos virados para fora do fogão",
         "Use tapetes antiderrapantes em banheiros e áreas molhadas",
         "Verifique fiações elétricas e tomadas regularmente",
@@ -145,30 +144,17 @@ export function InstructionsSection() {
       ],
       emergencyNumber: "192 / 193"
     }
-
   ];
 
-  const [openInstructions, setOpenInstructions] = useState<string[]>([]);
-
-  const toggleInstruction = (id: string) => {
-    setOpenInstructions(prev =>
-      prev.includes(id)
-        ? prev.filter(item => item !== id)
-        : [...prev, id]
-    );
-  };
-
   return (
-    <section id="instrucoes" className="py-20" style={{
-      background: "linear-gradient(to right bottom,  #bbd2f0ff,  #bbd2f0ff,  #bbd2f0ff)"
-    }}>
+    <section id="instrucoes" className="py-20" style={{ background: "linear-gradient(to right bottom,  #13315c,  #13315c, #13315c)" }}>
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#003049] mb-4">
+          <h2 className="text-5xl font-extrabold text-[#003049] mb-4">
             Instruções de Emergência
           </h2>
-          <p className="text-xl text-[#003049]/70 max-w-3xl mx-auto">
+          <p className="text-2xl font-bold text-[#003049]/70 max-w-3xl mx-auto">
             Guias detalhados para diferentes tipos de emergências.
             Conhecimento que pode salvar vidas em momentos críticos.
           </p>
@@ -180,23 +166,19 @@ export function InstructionsSection() {
             <Card key={emergency.id} className="bg-white border-0 shadow-lg overflow-hidden">
               <CardHeader className={`${emergency.bgColor} border-b`}>
                 <div className="flex items-center space-x-4">
-                  <div className={`${emergency.color} p-3 bg-white rounded-full`}>
-                    <emergency.icon className="h-8 w-8" />
+                  <div className={`${emergency.color} p-4 bg-white rounded-full`}>
+                    <emergency.icon className="h-10 w-10" />
                   </div>
                   <div className="flex-1">
-                    <CardTitle className="text-2xl text-[#003049]">
-                      {emergency.title}
-                    </CardTitle>
-                    <p className="text-[#003049]/70 mt-1">
-                      {emergency.description}
-                    </p>
+                    <CardTitle className="text-3xl font-extrabold text-[#003049]">{emergency.title}</CardTitle>
+                    <p className="text-lg font-bold text-[#003049]/80 mt-2">{emergency.description}</p>
                   </div>
                   <Button
-                    size="sm"
-                    className="bg-[#c1121f] hover:bg-[#780000] text-white border-0"
+                    size="md"
+                    className="bg-[#c1121f] hover:bg-[#780000] text-white border-0 font-bold text-lg"
                     onClick={() => window.open(`tel:${emergency.emergencyNumber.replace(' / ', '')}`, '_self')}
                   >
-                    <Phone className="h-4 w-4 mr-2" />
+                    <Phone className="h-5 w-5 mr-2" />
                     {emergency.emergencyNumber}
                   </Button>
                 </div>
@@ -204,53 +186,41 @@ export function InstructionsSection() {
 
               <CardContent className="p-6">
                 <Tabs defaultValue="immediate" className="w-full">
-                  <TabsList className="grid w-full grid-cols-3 mb-6">
+                  <TabsList className="grid w-full grid-cols-3 mb-6 text-lg font-bold">
                     <TabsTrigger value="immediate">Ações Imediatas</TabsTrigger>
                     <TabsTrigger value="donts">Não Faça</TabsTrigger>
                     <TabsTrigger value="prevention">Prevenção</TabsTrigger>
                   </TabsList>
 
                   <TabsContent value="immediate" className="space-y-3">
-                    <div className="flex items-center space-x-2 mb-4">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      <h4 className="font-semibold text-[#003049]">O que fazer imediatamente:</h4>
-                    </div>
                     {emergency.immediateActions.map((action, index) => (
-                      <div key={index} className="flex items-start space-x-3 p-3 bg-green-50 rounded-lg">
-                        <div className="bg-green-100 rounded-full p-1 mt-0.5">
-                          <CheckCircle className="h-4 w-4 text-green-600" />
+                      <div key={index} className="flex items-start space-x-3 p-4 bg-green-50 rounded-lg">
+                        <div className="bg-green-100 rounded-full p-2 mt-0.5">
+                          <CheckCircle className="h-5 w-5 text-green-600" />
                         </div>
-                        <p className="text-[#003049] text-sm leading-relaxed">{action}</p>
+                        <p className="text-base font-bold text-[#003049]">{action}</p>
                       </div>
                     ))}
                   </TabsContent>
 
                   <TabsContent value="donts" className="space-y-3">
-                    <div className="flex items-center space-x-2 mb-4">
-                      <AlertTriangle className="h-5 w-5 text-red-600" />
-                      <h4 className="font-semibold text-[#003049]">Nunca faça:</h4>
-                    </div>
                     {emergency.doNots.map((dont, index) => (
-                      <div key={index} className="flex items-start space-x-3 p-3 bg-red-50 rounded-lg">
-                        <div className="bg-red-100 rounded-full p-1 mt-0.5">
-                          <AlertTriangle className="h-4 w-4 text-red-600" />
+                      <div key={index} className="flex items-start space-x-3 p-4 bg-red-50 rounded-lg">
+                        <div className="bg-red-100 rounded-full p-2 mt-0.5">
+                          <AlertTriangle className="h-5 w-5 text-red-600" />
                         </div>
-                        <p className="text-[#003049] text-sm leading-relaxed">{dont}</p>
+                        <p className="text-base font-bold text-[#003049]">{dont}</p>
                       </div>
                     ))}
                   </TabsContent>
 
                   <TabsContent value="prevention" className="space-y-3">
-                    <div className="flex items-center space-x-2 mb-4">
-                      <Zap className="h-5 w-5 text-[#669bbc]" />
-                      <h4 className="font-semibold text-[#003049]">Medidas preventivas:</h4>
-                    </div>
                     {emergency.prevention.map((preventive, index) => (
-                      <div key={index} className="flex items-start space-x-3 p-3 bg-[#669bbc]/10 rounded-lg">
-                        <div className="bg-[#669bbc]/20 rounded-full p-1 mt-0.5">
-                          <Zap className="h-4 w-4 text-[#669bbc]" />
+                      <div key={index} className="flex items-start space-x-3 p-4 bg-[#669bbc]/10 rounded-lg">
+                        <div className="bg-[#669bbc]/20 rounded-full p-2 mt-0.5">
+                          <Zap className="h-5 w-5 text-[#669bbc]" />
                         </div>
-                        <p className="text-[#003049] text-sm leading-relaxed">{preventive}</p>
+                        <p className="text-base font-bold text-[#003049]">{preventive}</p>
                       </div>
                     ))}
                   </TabsContent>
@@ -259,41 +229,6 @@ export function InstructionsSection() {
             </Card>
           ))}
         </div>
-
-        {/* Kit de Emergência */}
-        <Card className="mt-12 bg-gradient-to-r from-[#003049] to-[#669bbc] text-white border-0">
-          <CardContent className="p-8">
-            <div className="text-center space-y-6">
-              <h3 className="text-3xl font-bold text-[#fdf0d5]">
-                Kit de Emergência Essencial
-              </h3>
-              <p className="text-xl text-[#fdf0d5]/80 max-w-2xl mx-auto">
-                Mantenha sempre preparado um kit com itens básicos para situações de emergência
-              </p>
-
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                {[
-                  { title: "Documentos", items: ["RG, CPF, CNH", "Cartão do SUS", "Comprovantes", "Fotos 3x4"] },
-                  { title: "Medicamentos", items: ["Remédios de uso contínuo", "Analgésicos", "Antialérgicos", "Kit primeiros socorros"] },
-                  { title: "Alimentação", items: ["Água potável (3L por pessoa)", "Alimentos não perecíveis", "Abrelatas", "Utensílios básicos"] },
-                  { title: "Outros Itens", items: ["Lanterna com pilhas", "Rádio portátil", "Roupas extras", "Cobertor"] }
-                ].map((category, index) => (
-                  <div key={index} className="bg-white/10 p-6 rounded-lg backdrop-blur-sm">
-                    <h4 className="font-bold text-[#fdf0d5] mb-4">{category.title}</h4>
-                    <ul className="space-y-2">
-                      {category.items.map((item, idx) => (
-                        <li key={idx} className="text-sm text-[#fdf0d5]/80 flex items-center">
-                          <CheckCircle className="h-3 w-3 mr-2 text-green-400" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </section>
   );

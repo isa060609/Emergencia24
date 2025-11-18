@@ -16,7 +16,6 @@ export function Footer() {
     { name: "Plano de Evacuação Familiar", href: "https://www.spsemprealerta.sp.gov.br/orientacoes/plano-familiar-de-emergencia/", target: "_blank" },
     { name: "Kit de Emergência", href: "https://www.ready.gov/kit", target: "_blank" },
     { name: "Alertas", href: "https://www.spsemprealerta.sp.gov.br/", target: "_blank" },
-
   ];
 
   const socialLinks = [
@@ -28,7 +27,7 @@ export function Footer() {
     <footer className="py-20" style={{
       background: "linear-gradient(to right bottom, #750101ff, #000, #081588ff)"
     }}>
-      {/* Seção Principal */}
+
       <div className=" mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
 
@@ -36,29 +35,34 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <div className="bg-[ #ffffffff] p-2 rounded-full">
-                <Phone className="h-6 w-6 text-white" />
+                <Phone className="h-7 w-7 text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold" style={{ color: "#fff" }}>Emergência 24h</h3>
-                <p className="text-xs text-[#669bbc]">Sempre pronto para ajudar</p>
+                <h3 className="text-3xl font-black" style={{ color: "#fff" }}>
+                  Emergência 24h
+                </h3>
+                <p className="text-lg font-black text-[#669bbc]">Sempre pronto para ajudar</p>
               </div>
             </div>
-            <p className="text-[#fdf0d5]/80 text-sm leading-relaxed">
+
+            <p className="text-[#fdf0d5]/80 text-lg font-black leading-relaxed">
               Portal dedicado à segurança e prevenção de emergências.
               Informações confiáveis, orientações especializadas e acesso rápido aos serviços de emergência.
             </p>
 
             <div className="space-y-2">
-              <div className="flex items-center space-x-2 text-sm" style={{ color: "#fff" }}>
-                <Clock className="h-4 w-4" />
+              <div className="flex items-center space-x-2 text-lg font-black" style={{ color: "#fff" }}>
+                <Clock className="h-6 w-6" />
                 <span>Atendimento 24 horas, 7 dias por semana</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm" style={{ color: "#fff" }}>
-                <MapPin className="h-4 w-4 text-[#ffffffff]" />
+
+              <div className="flex items-center space-x-2 text-lg font-black" style={{ color: "#fff" }}>
+                <MapPin className="h-6 w-6 text-[#ffffffff]" />
                 <span>Cobertura nacional</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm" style={{ color: "#fff" }}>
-                <Mail className="h-4 w-4 text-[ #ffffffff]" />
+
+              <div className="flex items-center space-x-2 text-lg font-black" style={{ color: "#fff" }}>
+                <Mail className="h-6 w-6 text-[ #ffffffff]" />
                 <span>contato@emergencia24h.gov.br</span>
               </div>
             </div>
@@ -66,17 +70,24 @@ export function Footer() {
 
           {/* Números de Emergência */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold" style={{ color: "#fff" }}>Números de Emergência</h3>
+            <h3 className="text-3xl font-black" style={{ color: "#fff" }}>
+              Números de Emergência
+            </h3>
+
             <div className="space-y-3">
               {emergencyServices.map((service) => (
-                <div key={service.number} className="flex items-center justify-between p-3 bg-[#669bbc]/10 rounded-lg hover:bg-[#669bbc]/20 transition-colors">
+                <div
+                  key={service.number}
+                  className="flex items-center justify-between p-4 bg-[#669bbc]/10 rounded-lg hover:bg-[#669bbc]/20 transition-colors"
+                >
                   <div>
-                    <p className="font-semibold text-[#fdf0d5]">{service.name}</p>
-                    <p className="text-xs text-[#fdf0d5]/70">{service.description}</p>
+                    <p className="font-black text-[#fdf0d5] text-xl">{service.name}</p>
+                    <p className="text-base font-semibold text-[#fdf0d5]/70">{service.description}</p>
                   </div>
+
                   <Button
                     size="sm"
-                    className="bg-[#c1121f] hover:bg-[#780000] text-white border-0 min-w-[60px]"
+                    className="bg-[#c1121f] hover:bg-[#780000] text-white border-0 min-w-[60px] text-xl font-black"
                     onClick={() => window.open(`tel:${service.number}`, '_self')}
                   >
                     {service.number}
@@ -86,9 +97,12 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links Rápidos */}
+          {/* Links Úteis */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold" style={{ color: "#fff" }}>Links Úteis</h3>
+            <h3 className="text-3xl font-black" style={{ color: "#fff" }}>
+              Links Úteis
+            </h3>
+
             <nav className="space-y-2">
               {quickLinks.map((link) => (
                 <a
@@ -96,20 +110,21 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between text-sm text-[#fdf0d5]/80 hover:text-[#669bbc] transition-colors p-2 rounded hover:bg-[#669bbc]/10"
+                  className="flex items-center justify-between text-lg font-black text-[#fdf0d5]/90 hover:text-[#669bbc] transition-colors p-3 rounded hover:bg-[#669bbc]/10"
                 >
                   <span>{link.name}</span>
-                  <ExternalLink className="h-3 w-3" />
+                  <ExternalLink className="h-5 w-5" />
                 </a>
               ))}
             </nav>
           </div>
 
-          {/* Redes Sociais e Newsletter */}
+          {/* Redes Sociais */}
           <div className="space-y-6">
             <div className="space-y-4">
-              <h3 className="text-lg font-bold" style={{ color: "#fff" }}>Siga-nos</h3>
-              <div className="flex space-x-3">
+              <h3 className="text-3xl font-black" style={{ color: "#fff" }}>Siga-nos</h3>
+
+              <div className="flex space-x-4">
                 {socialLinks.map((social) => (
                   <Button
                     key={social.name}
@@ -118,18 +133,11 @@ export function Footer() {
                     className="border-[#669bbc] text-[#669bbc] hover:bg-[#669bbc] hover:text-[#003049]"
                     onClick={() => window.open(social.href, '_blank')}
                   >
-                    <social.icon className="h-4 w-4" />
+                    <social.icon className="h-6 w-6" />
                   </Button>
                 ))}
               </div>
             </div>
-
-            {/* <div className="space-y-3">
-              <h4 className="font-semibold text-[#fdf0d5]">Alertas de Emergência</h4>
-              <p className="text-sm text-[#fdf0d5]/70">
-                Receba notificações importantes sobre emergências na sua região
-              </p>
-            </div> */}
           </div>
         </div>
       </div>
@@ -137,20 +145,21 @@ export function Footer() {
       <Separator className="bg-[#669bbc]/30" />
 
       {/* Rodapé Inferior */}
-
-
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-[#fdf0d5]/70">
+
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-lg font-black text-[#fdf0d5]/80">
             <p>&copy; 2025 Emergência 24h. Todos os direitos reservados.</p>
           </div>
+
           <div className="flex items-center space-x-4">
-            <div className="bg-[#c1121f] px-4 py-2 rounded-full">
-              <p className="text-white text-sm font-semibold">
+            <div className="bg-[#c1121f] px-6 py-3 rounded-full">
+              <p className="text-white text-lg font-black">
                 Em caso de emergência: ligue 192, 193 ou 190
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </footer>

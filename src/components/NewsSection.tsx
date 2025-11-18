@@ -42,7 +42,7 @@ export function NewsSection() {
       className="py-20"
       style={{
         background:
-          "linear-gradient(to right bottom, #bbd2f0ff, #bbd2f0ff, #bbd2f0ff)",
+          "linear-gradient(to right bottom,  #13315c,  #13315c, #13315c)"
       }}
     >
       <div className="container mx-auto px-4">
