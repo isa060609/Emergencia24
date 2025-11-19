@@ -147,17 +147,22 @@ export function InstructionsSection() {
   ];
 
   return (
-    <section id="instrucoes" className="py-20" style={{ background: "linear-gradient(to right bottom,  #13315c,  #13315c, #13315c)" }}>
+    <section
+      className="py-20 bg-[#13315c]"
+      style={{ backgroundColor: "#13315c" }}
+    >
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-extrabold text-[#003049] mb-4">
+          <h2 className="text-5xl font-extrabold text-white mb-4">
             Instruções de Emergência
           </h2>
-          <p className="text-2xl font-bold text-[#003049]/70 max-w-3xl mx-auto">
+          <p className="text-2xl font-bold text-white max-w-3xl mx-auto">
             Guias detalhados para diferentes tipos de emergências.
             Conhecimento que pode salvar vidas em momentos críticos.
           </p>
+
+
         </div>
 
         {/* Grid de Emergências */}
