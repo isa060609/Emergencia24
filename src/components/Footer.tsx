@@ -16,6 +16,14 @@ export function Footer() {
     { name: "Plano de Evacuação Familiar", href: "https://www.spsemprealerta.sp.gov.br/orientacoes/plano-familiar-de-emergencia/", target: "_blank" },
     { name: "Kit de Emergência", href: "https://www.ready.gov/kit", target: "_blank" },
     { name: "Alertas", href: "https://www.spsemprealerta.sp.gov.br/", target: "_blank" },
+    { name: "Engasgo", href: "https://youtu.be/uImVd4rBlPA?si=DTbZjZy2BJ0z0nvM", target: "_blank" },
+    { name: "Criança Ingerindo Produtos de Limpeza", href: "https://youtu.be/n-eO6F0gfFw?si=Ws5v9Y0J2utsT_Xf", target: "_blank" },
+    { name: "Queda", href: "https://youtu.be/8VwCIxcprX8?si=enNeXpnDgk5bRU19", target: "_blank" },
+    { name: "Queda em Idoso", href: "https://youtu.be/xxj7CNaHX9M?si=ISsqtt86UnPUwLwr", target: "_blank" },
+
+
+
+
   ];
 
   const socialLinks = [
