@@ -13,21 +13,21 @@ export function NewsSection() {
   const API_URL = `https://gnews.io/api/v4/search?q=incendio+OR+enchente+OR+resgate+OR+emergencia&lang=pt&country=br&max=3&token=${API_KEY}`;
 
   async function carregarNoticias() {
-  try {
-    const API_URL = `https://gnews.io/api/v4/search?q=incendio+OR+enchente+OR+resgate+OR+emergencia&lang=pt&country=br&max=3&token=e24c9660e298d76ec197d3258e8effc8`;
+    try {
+      const API_URL = `https://gnews.io/api/v4/search?q=incendio+OR+enchente+OR+resgate+OR+emergencia&lang=pt&country=br&max=3&token=e24c9660e298d76ec197d3258e8effc8`;
 
-    // Passa pelo proxy para evitar bloqueio de CORS
-    const proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(API_URL)}`;
+      // Passa pelo proxy para evitar bloqueio de CORS
+      const proxyURL = `https://api.allorigins.win/get?url=${encodeURIComponent(API_URL)}`;
 
-    const res = await fetch(proxyURL);
-    const dataWrapped = await res.json();
-    const data = JSON.parse(dataWrapped.contents);
+      const res = await fetch(proxyURL);
+      const dataWrapped = await res.json();
+      const data = JSON.parse(dataWrapped.contents);
 
-    setNews(data.articles.slice(0, 3));
-  } catch (error) {
-    console.error("Erro ao carregar notícias:", error);
+      setNews(data.articles.slice(0, 3));
+    } catch (error) {
+      console.error("Erro ao carregar notícias:", error);
+    }
   }
-}
 
 
   useEffect(() => {
@@ -41,19 +41,20 @@ export function NewsSection() {
       id="noticias"
       className="py-20"
       style={{
-        background:
-          "linear-gradient(to right bottom,  #13315c,  #13315c, #13315c)"
+        background: "#13315c",
       }}
+
     >
       <div className="container mx-auto px-4">
         {/* Título da seção */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#003049] mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             Últimas Notícias de Emergência
           </h2>
-          <p className="text-xl text-[#003049]/70 max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Atualizações em tempo real sobre incêndios, enchentes e resgates no Brasil
           </p>
+
         </div>
 
         {/* Grid de 3 notícias */}
